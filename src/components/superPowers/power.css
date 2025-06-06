@@ -53,13 +53,13 @@
 .wood-piece.top-left {
   top: 40px;
   left: 40px;
-  background-image: url('/portfolio/wood-piece-1.png');
+  background-image: url('/portfolio/tree.png');
 }
 
 .wood-piece.bottom-right {
   bottom: 40px;
   right: 40px;
-  background-image: url('/portfolio/wood-piece-2.png');
+  background-image: url('/portfolio/tree.png');
   transform: rotate(180deg);
 }
 
