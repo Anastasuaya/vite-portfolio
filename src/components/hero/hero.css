@@ -74,7 +74,7 @@
 .hero-elf {
   width: 250px;
   height: 500px;
-  background-image: url('./portfolio/ElfIdle.png');
+  background-image: url('/portfolio/ElfIdle.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -146,7 +146,7 @@
 
 .forest-image {
   position: absolute;
-  background-image: url('./portfolio/tree.png');
+  background-image: url('/portfolio/tree.png');
   background-size: cover;
   background-position: center;
 }

@@ -138,7 +138,7 @@
   transform: translateY(-50%);
   width: 600px;
   height: 700px;
-  background-image: url(/portfolio/tree.png);
+  background-image: url('/portfolio/tree.png');
   background-size: contain;
   background-repeat: no-repeat;
   z-index: -1;

@@ -36,7 +36,7 @@
   width: 140px;
   height: 140px;
   aspect-ratio: 1/1; /* Квадратная форма */
-  background-image: url('./portfolio/HotkeyBox.png');
+  background-image: url('/portfolio/HotkeyBox.png');
   background-size: cover;
   background-position: center;
   /* border: 2px solid #BFB094; */
@@ -53,7 +53,7 @@
   position: absolute;
   width: 600px;
   height: 700px;
-  background-image: url('./portfolio/tree.png');
+  background-image: url('/portfolio/tree.png');
   background-size: contain;
   background-repeat: no-repeat;
   z-index: -1;
