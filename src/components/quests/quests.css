@@ -1,0 +1,145 @@
+.content-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 900px;
+  width: 100%;
+  position: relative;
+
+}
+
+/* Основной контейнер для всего контента */
+.content-block {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* Контейнер для книги и заголовка (flex row) */
+.title-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+/* Стили для книги */
+.book-container {
+  width: 70px;
+  height: 100px;
+  flex-shrink: 0;
+}
+
+.content-img {
+  width: 60px;
+  height: 100px;
+  background-image: url(/portfolio/book_01a.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+  transition: all 0.3s ease;
+}
+
+.content-img:hover {
+  background-image: url(/portfolio/book_01g.png);
+  transform: translateY(-5px) rotate(-5deg);
+}
+
+/* Заголовок "Квесты" */
+.quest-title {
+  font-size: 40px;
+  /* color: #BFB094; */
+  margin: 0;
+  position: relative;
+    text-shadow: 0 0 10px rgba(233, 229, 221, 0.5);
+}
+
+.quest-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #BFB094, transparent);
+}
+
+/* Блок с наградами */
+.awards {
+  width: 100%;
+  max-width: 800px;
+  margin-top: 20px;
+  background-color: rgba(55, 61, 86, 0.3);
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #BFB094;
+}
+
+.awards h2 {
+  font-size: 28px;
+  color: #ffffff;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.awards h3 {
+  font-size: 22px;
+  color: #BFB094;
+  text-align: left;
+  margin: 20px 0 15px 0;
+  padding-left: 10px;
+  border-left: 3px solid #BFB094;
+}
+
+.awList {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.aw-item {
+  font-size: 20px;
+  color: white;
+  padding: 8px 15px;
+  background-color: rgba(55, 61, 86, 0.5);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.aw-item:hover {
+  background-color: rgba(191, 176, 148, 0.2);
+  transform: translateX(5px);
+}
+
+.aw-item::before {
+  content: url(/portfolio/gem_01h.png);
+  margin-right: 15px;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+}
+
+.aw-item:hover::before {
+  transform: rotate(15deg) scale(1.1);
+}
+
+.quest-tree {
+  position: absolute;
+  right: -50px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 600px;
+  height: 700px;
+  background-image: url(/portfolio/tree.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
+}

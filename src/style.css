@@ -13,3 +13,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+@font-face {
+  font-family: 'PixelFont';
+  src: url('../assets/pixel-font.ttf') format('truetype');
+}
+
+body {
+  font-family: 'Press Start 2P', cursive;
+  background-color: rgba(55, 61, 86, 1);
+  color: #ffffff;
+  margin: 0;
+  image-rendering: pixelated;
+    overflow-x: hidden; /* Блокирует горизонтальный скролл */
+  width: 100%; 
+}

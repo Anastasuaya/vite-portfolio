@@ -1,0 +1,147 @@
+/* Стили для секции суперсил */
+.superpowers-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  /* padding: 80px 20px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: rgba(40, 44, 62, 0.8); */
+  overflow: hidden;
+}
+
+/* Фоновые деревья */
+.superpowers-tree {
+  position: absolute;
+  background-image: url('/portfolio/tree.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+  z-index: 0;
+}
+
+.superpowers-tree.big {
+  width: 600px;
+  height: 700px;
+  /* filter: brightness(0.7); */
+}
+
+.superpowers-tree.left {
+  left: -150px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.superpowers-tree.right {
+  right: -150px;
+  bottom: 50%;
+  transform: translateY(50%) scaleX(-1);
+}
+
+/* Декоративные элементы дерева */
+.wood-piece {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+  z-index: 5;
+}
+
+.wood-piece.top-left {
+  top: 40px;
+  left: 40px;
+  background-image: url('/portfolio/wood-piece-1.png');
+}
+
+.wood-piece.bottom-right {
+  bottom: 40px;
+  right: 40px;
+  background-image: url('/portfolio/wood-piece-2.png');
+  transform: rotate(180deg);
+}
+
+/* Контейнер контента */
+.superpowers-container {
+  position: relative;
+  z-index: 10;
+  max-width: 800px;
+  width: 100%;
+}
+
+/* Заголовок */
+.superpowers-main-title {
+  font-size: 32px;
+  color: #BFB094;
+  text-align: center;
+  margin-bottom: 50px;
+  text-shadow: 0 0 10px rgba(191, 176, 148, 0.5);
+}
+
+/* Блок суперсил */
+.powers-box {
+  background-color: rgba(55, 61, 86, 0.6);
+  border: 2px solid #BFB094;
+  border-radius: 10px;
+  padding: 40px;
+  position: relative;
+  /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); */
+}
+
+.powers-subtitle {
+  font-size: 28px;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.powers-subtitle::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 3px;
+  background: #BFB094;
+  margin: 15px auto 0;
+}
+
+/* Список суперсил */
+.powers-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.power-item {
+  font-size: 20px;
+  color: white;
+  padding: 8px 15px;
+  background-color: rgba(55, 61, 86, 0.5);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.power-item:hover {
+  background-color: rgba(191, 176, 148, 0.2);
+  transform: translateX(5px);
+}
+
+.power-item::before {
+  content: url(/portfolio/gem_01h.png);
+  margin-right: 15px;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+}
+
+.power-item:hover::before {
+  transform: rotate(15deg) scale(1.1);
+}

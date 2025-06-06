@@ -1,0 +1,218 @@
+.hero {
+  width: 100%;
+  height: 600px;
+  background-size: 500%; /* Обрезает изображение */
+  background-position: 60% 30%; /* Центрирует */
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-container {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 35%;
+  margin-right: 10%;
+  z-index: 10;
+}
+
+/* Стили для многострочного эффекта печати */
+.hero-content h1 {
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+  font-size: 50px;
+  line-height: 1.6;
+  text-align: center;
+    text-shadow: 0 0 10px rgba(222, 220, 216, 0.5); 
+}
+
+.type-line {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  border-right: 2px solid transparent;
+  width: 0;
+  animation-fill-mode: forwards;
+}
+
+/* Анимация для каждой строки с разными задержками */
+.type-line:nth-child(1) {
+  animation: 
+    typing 2s steps(30, end) forwards,
+    blink-caret 0.75s step-end 4;
+}
+
+.type-line:nth-child(2) {
+  animation: 
+    typing 3s steps(40, end) 2.2s forwards,
+    blink-caret 0.75s step-end 4 2.2s;
+}
+
+.type-line:nth-child(3) {
+  animation: 
+    typing 2.5s steps(35, end) 5.5s forwards,
+    blink-caret 0.75s step-end infinite 5.5s;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #d0af61; }
+}
+
+.hero-elf {
+  width: 250px;
+  height: 500px;
+  background-image: url('./portfolio/ElfIdle.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute; 
+  left: 15%; /* Регулируйте по необходимости */
+  /* bottom: 0%; */
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+
+.hero-elf:hover {
+  filter: 
+    brightness(0.8) 
+    drop-shadow(0 0 30px rgba(208, 175, 97, 0.9)); /* Золотистое свечение */
+  transform: scale(1.02); /* Лёгкое увеличение */
+}
+
+.hero-elf::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  left: -60px;
+  right: -60px;
+  bottom: -60px;
+  background: radial-gradient(circle,
+   rgba(208, 175, 97, 0.15) 0%,
+   rgba(208, 175,97,0.1) 40%
+   transparent 60%);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  border-radius: 10%;
+  transform: scale(0.95);
+  filter: blur(100%);
+}
+
+.hero-elf:hover::before {
+  opacity: 1;
+  transform: scale(1);
+  animation: pulse-glow 0.1s infinite alternate; /* Пульсирующее свечение */
+}
+
+@keyframes pulse-glow {
+  0% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+
+.hero-content {
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  line-height: 1.7
+  /* max-width: 50%; */
+  /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */
+}
+.forest {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.forest-image {
+  position: absolute;
+  background-image: url('./portfolio/tree.png');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Оригинальные изображения */
+.forest-image.original {
+  width: 500px;
+  height: 600px;
+  z-index: 1;
+}
+
+/* Первое оригинальное изображение */
+.forest-image.original:nth-child(1) {
+  top: 30%;
+  left: -10%;
+}
+
+/* Второе оригинальное изображение */
+.forest-image.original:nth-child(2) {
+  top: 30%;
+  right: -10%;
+  transform: scaleX(-1); /* Отражаем для разнообразия */
+}
+
+/* Уменьшенные затемнённые изображения */
+.forest-image.small.dark {
+  width: 350px;
+  height: 450px;
+  filter: brightness(0.2);
+  z-index: -1;
+}
+
+/* Позиционируем 5 уменьшенных изображений */
+.forest-image.small.dark:nth-child(3) {
+  top: 40%;
+  left: 5%;
+}
+.forest-image.small.dark:nth-child(4) {
+  top: 30%;
+  left: 15%;
+}
+.forest-image.small.dark:nth-child(5) {
+  top: 40%;
+  left: 25%;
+}
+.forest-image.small.dark:nth-child(6) {
+  top: 30%;
+  left: 35%;
+}
+.forest-image.small.dark:nth-child(7) {
+  top: 30%;
+  left: 55%;
+}
+.forest-image.small.dark:nth-child(8) {
+  top: 40%;
+  left: 45%;
+}
+.forest-image.small.dark:nth-child(9) {
+  top: 40%;
+  left: 65%;
+}
+.forest-image.small.dark:nth-child(10) {
+  top: 30%;
+  left: 75%;
+}
+.forest-image.small.dark:nth-child(11) {
+  top: 45%;
+  left: 80%;
+}

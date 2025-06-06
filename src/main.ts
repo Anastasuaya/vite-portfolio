@@ -1,3 +1,6 @@
 import './style.css'
 
-console.log('hello world')
+import { createApp } from './app';
+
+const app = document.querySelector<HTMLDivElement>('#app')!;
+app.appendChild(createApp());

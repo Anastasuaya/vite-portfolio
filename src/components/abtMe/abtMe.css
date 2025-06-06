@@ -1,0 +1,161 @@
+/* Стили для секции "Обо мне" */
+.about-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Фоновый лес */
+.about-forest {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.forest-tree {
+  position: absolute;
+  background-image: url('/portfolio/tree.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+}
+
+.forest-tree.original {
+  width: 600px;
+  height: 700px;
+  z-index: 1;
+}
+
+.forest-tree.small {
+  width: 400px;
+  height: 500px;
+  filter: brightness(0.2);
+}
+
+/* Позиционирование деревьев */
+.forest-tree.original:nth-child(1) {
+  top: 10%;
+  left: -10%;
+}
+
+.forest-tree.original:nth-child(2) {
+  top: 10%;
+  right: -10%;
+  transform: scaleX(-1);
+}
+
+.forest-tree.small:nth-child(3) { top: 20%; left: 5%; }
+.forest-tree.small:nth-child(4) { top: 15%; left: 15%; }
+.forest-tree.small:nth-child(5) { top: 25%; left: 25%; }
+.forest-tree.small:nth-child(6) { top: 15%; left: 35%; }
+.forest-tree.small:nth-child(7) { top: 20%; left: 55%; }
+.forest-tree.small:nth-child(8) { top: 25%; left: 45%; }
+.forest-tree.small:nth-child(9) { top: 20%; left: 65%; }
+.forest-tree.small:nth-child(10) { top: 15%; left: 75%; }
+.forest-tree.small:nth-child(11) { top: 25%; left: 85%; }
+
+/* Контент */
+.about-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 90%;
+  max-width: 1200px;
+  gap: 40px;
+}
+
+/* Эльфийка */
+.about-elf {
+  position: absolute;
+  width: 450px;
+  height: 500px;
+  background-image: url('/portfolio/ElfBasicAtk.png');
+  background-size: cover;
+  /* background-position:  */
+  background-repeat: no-repeat;
+  transform: scaleX(-1);
+  top: 50%;
+  right: 0%;
+}
+
+.about-elf:hover {
+  filter: 
+    brightness(0.8) 
+    drop-shadow(0 0 30px rgba(208, 175, 97, 0.9)); /* Золотистое свечение */
+  transform: scale(1.02); /* Лёгкое увеличение */
+  transform: scaleX(-1);
+}
+
+.about-elf::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  left: -60px;
+  right: -60px;
+  bottom: -60px;
+  background: radial-gradient(circle,
+   rgba(208, 175, 97, 0.15) 0%,
+   rgba(208, 175,97,0.1) 40%
+   transparent 60%);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  border-radius: 10%;
+  transform: scale(0.95);
+  filter: blur(100%);
+}
+
+.about-elf:hover::before {
+  opacity: 1;
+  transform: scale(1);
+  animation: pulse-glow 0.1s infinite alternate; /* Пульсирующее свечение */
+}
+
+@keyframes pulse-glow {
+  0% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+/* Текст */
+.about-text {
+  z-index: 1;
+  max-width: 1000px;
+  color: white;
+}
+
+.about-title {
+  text-align: center;
+  font-size: 36px;
+  color: #BFB094;
+  margin-bottom: 20px;
+  line-height: 1.5;
+    text-shadow: 0 0 10px rgba(191, 176, 148, 0.5);
+}
+
+.about-subtitle {
+    text-align: center;
+  font-size: 28px;
+  color: #ffffff;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.about-paragraph {
+    text-align: center;
+  font-size: 22px;
+  line-height: 1.5;
+  /* opacity: 0.9; */
+}

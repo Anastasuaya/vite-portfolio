@@ -1,0 +1,39 @@
+.header {
+  position: relative; /* Добавляем для корректного z-index */
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+}
+
+.github-link {
+  font-size: 30px;
+  color: #BFB094;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  position: relative;
+  z-index: 100; /* Поднимаем над всеми элементами */
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.github-link:hover {
+  color: #ffffff;
+}
+
+.github-link::before {  
+    content: "";  
+    position: absolute;  
+    display: block;  
+    width: 100%;  
+    height: 2px;  
+    bottom: 0;  
+    left: 0;  
+    background-color: #BFB094;  
+    transform: scaleX(0);  
+    transition: transform 0.5s ease;  
+}  
+.github-link:hover::before {  
+    transform: scaleX(1);  
+}  

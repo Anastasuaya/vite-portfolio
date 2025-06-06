@@ -1,0 +1,135 @@
+.inventory-container {
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inventory {
+  margin-top: 10%;
+  width: 100%;
+  height: 700px;
+  display: flex;
+  text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  text-align: center;
+}
+
+.inventory-title {
+  font-size: 40px;
+  margin-bottom: 60px;
+  letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(233, 232, 230, 0.5);
+}
+
+.grid-container{
+  display: grid;
+  grid-template-columns: repeat(6, 0fr);
+
+}
+
+.inventory-item {
+  width: 140px;
+  height: 140px;
+  aspect-ratio: 1/1; /* Квадратная форма */
+  background-image: url('./portfolio/HotkeyBox.png');
+  background-size: cover;
+  background-position: center;
+  /* border: 2px solid #BFB094; */
+  filter: brightness(0.8);
+  transition: transform 0.3s ease;
+}
+
+.inventory-item:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.inventory-tree {
+  position: absolute;
+  width: 600px;
+  height: 700px;
+  background-image: url('./portfolio/tree.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
+  /* filter: brightness(0.2); */
+}
+
+.inventory-tree.left {
+  left: -100%;
+  /* transform: scaleX(-1); */
+}
+
+.inventory-tree.right {
+  right: -110%;
+}
+
+.item-img {
+  width: 80px;
+  height: 80px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+}
+
+.item-img.html { background-image: url(/portfolio/html.png);
+  position: absolute;
+  top: 20%;
+  left: 20%;
+}
+.item-img.css { background-image: url(/portfolio/css-3.png);
+  position: absolute;
+  top: 20%;
+  left: 20%;
+}
+.item-img.ts { background-image: url(/portfolio/icons8-typescript-96.png);
+  position: absolute;
+  top: 20%;
+  left: 20%;
+}
+.item-img.js { background-image: url(/portfolio/icons8-javascript-96.png);
+  position: absolute;
+  top: 20%;
+  left: 20%;
+}
+.item-img.vue { background-image: url(/portfolio/icons8-vue.js-96.png);
+  position: absolute;
+  top: 20%;
+  left: 20%;
+}
+.item-img.kaboom { background-image: url(/portfolio/kaboomjs.png);
+  position: absolute;
+  top: 20%;
+  left: 20%;
+}
+.item-img.coin { background-image: url(/portfolio/coin_01d.png);
+  position: absolute;
+  top: 20%;
+  left: 20%;
+}
+.item-img.candy { background-image: url(/portfolio/fruit_01b.png);
+  position: absolute;
+  top: 20%;
+  left: 20%;
+}
+.item-img.bow { background-image: url(/portfolio/bow_03a.png);
+  position: absolute;
+  top: 20%;
+  left: 20%;
+}
+.item-img.cookie { background-image: url(/portfolio/cookie_01a.png);
+  position: absolute;
+  top: 20%;
+  left: 20%;
+}
+.item-img.coins {background-image: url(/portfolio/coin_01d.png);
+  position: absolute;
+  top: 20%;
+  left: 20%;
+}
